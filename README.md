@@ -29,3 +29,6 @@ axios("http://localhost:3001/countries/a", {withCredentials: true})
 `{withCredentials: true}` is the extra configuration. You have to do this at least for every API request that requires authentication, like a profile page.
 
 That's it!
+
+### Note
+The reason you've to set CORS is not really caused by React. It's caused by splitting up the application on a development server and a backend server. If you would host the React code and the API on the same origin (same domain and port), you wouldn't need to set CORS.
